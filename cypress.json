@@ -1,0 +1,15 @@
+{
+    "baseUrl": "http://10.54.3.39/AMI",
+    "video": false,
+    "defaultCommandTimeout": 20000,
+    "pageLoadTimeout": 900000,
+    "integrationFolder": "cypress/integration",
+    "pluginsFile": "cypress/plugins",
+    "fixturesFolder": "cypress/fixtures",
+    "supportFile": "cypress/support",
+    "screenshotsFolder": "cypress/screenshots",
+    "viewportHeight": 1060,
+    "viewportWidth": 1400,
+    "waitForAnimations": true
+    
+}
