@@ -3,7 +3,7 @@
     "video": false,
     "defaultCommandTimeout": 20000,
     "pageLoadTimeout": 900000,
-    "integrationFolder": "cypress/integrations",
+    "integrationFolder": "cypress/integration",
     "pluginsFile": "cypress/plugins",
     "fixturesFolder": "cypress/fixtures",
     "supportFile": "cypress/support",
