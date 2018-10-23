@@ -15,19 +15,20 @@
       "name": "Don't show prefixes in object names",
       "type": "Events",
       "tags":"Tags",
+      "list": "Lists",
       "anyInput" : "!!QA Test Again/bah",
       "browseContext": "!!QA Data 2",
       "browseQaTestAgain": "!!QA Test Again",
       "browseDemoCatalog": "!!Demo Catalog",
-      "jldSingleIndex": "JLD Single Index",
-      "cantileverChair" : "Cantilever Chair"
+      "jldSingleIndex": "JLD Single Index"
     },
 
     "attribute":
     {
-      "name" : "new_attribute",
+      "name" : "DummyGadget",
+      "inputTypeValue" : "Tag Relation",
       "inputValue":"ravi_tagRelation",
-       "attributeName": "single_tag_bbnh"
+      "attributeName": "single_tag_bbnh"
     },
 
     "toolbarVerifyAction": 
@@ -56,8 +57,7 @@
         [
           "Object Id:",
           "Object Name:",
-          "Related Objects",
-          "Show Object Browser"
+          "Related Objects"
         ],
       "tagRelationAssertionDisable": 
         [
@@ -72,6 +72,7 @@
         "error1259" : "1259: No matching objects found.",
         "error1098" : "1098: Error from Agility Server: Invalid session id. You must re-bind to this provider. (4007)",
         "error1253" : "1253: Non-numeric characters found in the list of IDs. Object IDs must be numeric.",
+        "error1275" : "1275: Selected list object has no children.",
         "group" : "Group",
         "any" : "Any",
         "listElementValue": "Object IDs",
@@ -90,7 +91,20 @@
         "showResultsAlways" : "Always",
         "showResultsOnlyErrors" : "Only when there are errors",
         "showResultsNever" : "Never",
-        "add" : "Add"
+        "add" : "Add",
+        "vQADBASE" : "vQADBASE",
+        "vQADBASEID" : "25935",
+        
+        "qaListTest" : "QA List Test",
+        "qaListTestId": "12033",
+        "addObjectS1" : "S1",
+        "addObjectC1" : "C1",
+        "addObject01" : "01",
+        "new" : "new",
+        "browserAddObject" : "Add Object...",
+        "AddObjectWindow" : "Add Object",
+        "addObjectValue" : "Child1",
+        "addObjectType" : "input[value='Group']"
       
     } 
 }

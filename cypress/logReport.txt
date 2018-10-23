@@ -1,0 +1,81 @@
+Test Scenario : Work list gadget with whitespace characters as delimiter 
+10/23/2018, 12:01:39 PM : Launch Browser with URL and trying to Login 
+10/23/2018, 12:01:51 PM : Browser Launched with URL and Logged in Successfully 
+10/23/2018, 12:01:52 PM : Trying to Change Worksapce to QA Working List Gadget 
+10/23/2018, 12:01:52 PM : QA Working List Gadget Changed Successfully 
+10/23/2018, 12:01:52 PM : Open Working List 
+10/23/2018, 12:01:52 PM : Working List Opened Successfully 
+10/23/2018, 12:01:52 PM : AMI-2015:22 Test Execution is Started 
+10/23/2018, 12:01:52 PM : Check on White Space Charater as delimiter 
+10/23/2018, 12:01:52 PM : Checked White Space Charater as delimiter & Delimiter is Disabled 
+10/23/2018, 12:01:52 PM : AMI-2015:22 Test Execution is Finished Successfully 
+10/23/2018, 12:01:52 PM : Trying to Logout 
+10/23/2018, 12:01:53 PM : Logout Sucessfully 
+10/23/2018, 12:01:54 PM : Launch Browser with URL and trying to Login 
+10/23/2018, 12:02:01 PM : Browser Launched with URL and Logged in Successfully 
+10/23/2018, 12:02:01 PM : Trying to Change Worksapce to QA Working List Gadget 
+10/23/2018, 12:02:02 PM : QA Working List Gadget Changed Successfully 
+10/23/2018, 12:02:02 PM : Open Working List 
+10/23/2018, 12:02:02 PM : Working List Opened Successfully 
+10/23/2018, 12:02:02 PM : AMI-2016:23 Test Execution is Started 
+10/23/2018, 12:02:02 PM : Select List Elements DropDown as Object Id 
+10/23/2018, 12:02:02 PM : checked White Space Charater as delimiter 
+10/23/2018, 12:02:03 PM : Enter Two Different Values in list object Text Box Sepertaed by Tabs : 950965 965950 
+10/23/2018, 12:02:03 PM : Select Add & Apply 
+10/23/2018, 12:02:03 PM : AMI-2016:23 Test Execution is Finished Successfully 
+10/23/2018, 12:02:03 PM : Trying to Logout 
+10/23/2018, 12:02:04 PM : Logout Sucessfully 
+10/23/2018, 12:02:05 PM : Launch Browser with URL and trying to Login 
+10/23/2018, 12:02:13 PM : Browser Launched with URL and Logged in Successfully 
+10/23/2018, 12:02:13 PM : Trying to Change Worksapce to QA Working List Gadget 
+10/23/2018, 12:02:13 PM : QA Working List Gadget Changed Successfully 
+10/23/2018, 12:02:13 PM : Open Working List 
+10/23/2018, 12:02:14 PM : Working List Opened Successfully 
+10/23/2018, 12:02:14 PM : AMI-2017:24 Test Execution is Started 
+10/23/2018, 12:02:14 PM : Enter Two Different Values in list object Text Box Sepertaed by Space : 950965 965950 
+10/23/2018, 12:02:15 PM : Select Add & Apply 
+10/23/2018, 12:02:15 PM : Displayig Error : 1259: No matching objects found. 
+10/23/2018, 12:02:15 PM : AMI-2017:24 Test Execution is Finished Successfully 
+10/23/2018, 12:02:15 PM : Trying to Logout 
+10/23/2018, 12:02:16 PM : Logout Sucessfully 
+10/23/2018, 12:02:16 PM : Launch Browser with URL and trying to Login 
+10/23/2018, 12:02:24 PM : Browser Launched with URL and Logged in Successfully 
+10/23/2018, 12:02:24 PM : Trying to Change Worksapce to QA Working List Gadget 
+10/23/2018, 12:02:25 PM : QA Working List Gadget Changed Successfully 
+10/23/2018, 12:02:25 PM : Open Working List 
+10/23/2018, 12:02:25 PM : Working List Opened Successfully 
+10/23/2018, 12:02:25 PM : AMI-2018:25 Test Execution is Started 
+10/23/2018, 12:02:25 PM : Select List Elements DropDown as Object Names 
+10/23/2018, 12:02:25 PM : Cheked on whitespace characters as delimiter 
+10/23/2018, 12:02:26 PM : Enter Two Different Values in list object Text Box Sepertaed by tabs : abcd dcba 
+10/23/2018, 12:02:26 PM : Select Add & Apply 
+10/23/2018, 12:02:27 PM : Displayig Error : 1259: No matching objects found. 
+10/23/2018, 12:02:27 PM : AMI-2018:25 Test Execution is Finished Successfully 
+10/23/2018, 12:02:27 PM : Trying to Logout 
+10/23/2018, 12:02:28 PM : Logout Sucessfully 
+10/23/2018, 12:02:28 PM : Launch Browser with URL and trying to Login 
+10/23/2018, 12:02:36 PM : Browser Launched with URL and Logged in Successfully 
+10/23/2018, 12:02:36 PM : Trying to Change Worksapce to QA Working List Gadget 
+10/23/2018, 12:02:37 PM : QA Working List Gadget Changed Successfully 
+10/23/2018, 12:02:37 PM : Open Working List 
+10/23/2018, 12:02:37 PM : Working List Opened Successfully 
+10/23/2018, 12:02:37 PM : AMI-2019:26 Test Execution is Started 
+10/23/2018, 12:02:37 PM : Select List Elements DropDown as Object Names 
+10/23/2018, 12:02:38 PM : Cheked on whitespace characters as delimiter 
+10/23/2018, 12:02:38 PM : Enter Two Different Values in list object Text Box Sepertaed by lines : abcd dcba 
+10/23/2018, 12:02:39 PM : Select Add & Apply 
+10/23/2018, 12:02:39 PM : AMI-2019:26 Test Execution is Finished Successfully 
+10/23/2018, 12:02:39 PM : Trying to Logout 
+10/23/2018, 12:02:40 PM : Logout Sucessfully 
+10/23/2018, 12:02:40 PM : Launch Browser with URL and trying to Login 
+10/23/2018, 12:02:48 PM : Browser Launched with URL and Logged in Successfully 
+10/23/2018, 12:02:48 PM : Trying to Change Worksapce to QA Working List Gadget 
+10/23/2018, 12:02:48 PM : QA Working List Gadget Changed Successfully 
+10/23/2018, 12:02:49 PM : Open Working List 
+10/23/2018, 12:02:49 PM : Working List Opened Successfully 
+10/23/2018, 12:02:49 PM : AMI-2020:27 Test Execution is Started 
+10/23/2018, 12:02:49 PM : Uncheck whitespace characters as delimiter checkbox 
+10/23/2018, 12:02:49 PM : Delimiter Should be Enabled 
+10/23/2018, 12:02:49 PM : AMI-2020:27 Test Execution is Finished Successfully 
+10/23/2018, 12:02:49 PM : Trying to Logout 
+10/23/2018, 12:02:50 PM : Logout Sucessfully

@@ -24,7 +24,7 @@
         "refresh" : "#ed-ws-param-refresh_toolbar",
         "help" : "#ed-ws-param-help_toolbar",
         "lock" : "#ed-ws-param-lock_toolbar",
-        "save" : "#ed-edit-ok",        
+        "save" : "#ed-edit-ok", 
         "menuCopy" : "#ws-toolbar-IndexGadget-button-1",
         "menuPaste" : "#ws-toolbar-IndexGadget-button-2",
         "menuReorder" : "#ws-toolbar-IndexGadget-button-4",
@@ -53,6 +53,7 @@
     {
         "browserIcon" : "#ContextBrowser-0-menu-icon",
         "browserIconCopy" :"#ws-toolbar-ContextBrowser-0-button-1",
+        "browserRefresh" : "#ContextBrowser-0-menu-refresh",
         "clipboard" : "#Clipboard-show-icon",
         "clipboardPrev" : "#cg-prev-btn > .mdi",
         "clipboardNext" : "#cg-next-btn > .mdi",
@@ -86,7 +87,7 @@
         "listObjectTextBox" : "#wl-id-list",
         "applyListDropDown" : "#wl-list-select",
         "showResultsDropDown" : "#wl-show-results",
-        "selectListCheckBox" : "wl-select-list-cb",
+        "selectListCheckBox" : "input[name='wl-select-list-cb']",
         "whitespaceCharacterCheckBox" : "#wl-whitespace-delim",
         "copyDescendantsCheckbox" : "#wl-prop-cb",
         "actionMenu" : "#WorkingList-menu-icon",
@@ -94,6 +95,12 @@
         "actionMenuHelp" : "#WorkingList-menu-help",
         "addDropDown" : "#wl-list-action",
         "add": "Add",
-        "apply" : ".srch-list-btn"
+        "apply" : ".srch-list-btn",
+        "browserIcon" : "#ContextBrowser-0-show-icon",
+        "AddObjectName" : "#dialog-add-object-name",
+        "AddObjectSelect": "#dialog-add-object-select",
+        "workingListWindow" : ".WorkingListGadget > .ws-show-hide-icon",
+        "workingListObjectId" : "input[id='ed-ws-param-addToListStructureWorkingListGadget_27-id']",
+        "workingListCreateNewListCheckbox" : "#ed-ws-param-canCreateListWorkingListGadget_28"
     }
 }

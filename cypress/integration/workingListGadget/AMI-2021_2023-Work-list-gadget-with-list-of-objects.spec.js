@@ -29,20 +29,28 @@ describe("Working List Gadget With List of objects", function() {
     cy.start('AMI-2021:28');
 
     // login in AMI
+    cy.addLog("Launch Browser with URL and trying to Login");
     loginUtils.loginToAMI(amiValue.amiLogin.username);
+    cy.addLog("Browser Launched with URL and Logged in Successfully");
 
     // Open QA Working List Gadget (this workspace has the required browser gadgets)
+    cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
     changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
+    cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
 
     // Open WorkList Gadget
+    cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
     anyGadgetUtils.openGadgetOrGroup(amiValue.anyGadget.workListGadget);
+    cy.addLog(amiValue.anyGadget.workListGadget +" Opened Successfully");
 
     // Select any in filter by object type
     cy.get(workListGadgetDom.filterByObjectDropDown).select(workListGadgetValue.any);
+    cy.addLog("Select Any Filter by object");
 
     // Select Object id as in list Element
     cy.get(workListGadgetDom.listElementsDropDown)
     .select(workListGadgetValue.listElementValue).should('have.value', "id");
+    cy.addLog("Select List Elements DropDown as Object Id");
 
     // Un check Use whitespace characters as delimiter checkbox
     cy.get(workListGadgetDom.whitespaceCharacterCheckBox).uncheck().should('not.be.checked');
@@ -55,9 +63,11 @@ describe("Working List Gadget With List of objects", function() {
     // In the 'List of Objects' field, enter any value 
     cy.get(workListGadgetDom.listObjectTextBox).clear().type(workListGadgetValue.listObjectTextBoxValue)
     .should('have.value', workListGadgetValue.listObjectTextBoxValue);
+    cy.addLog("Enter any Value in List object Text Box : ", workListGadgetValue.listObjectTextBoxValue);
 
     // Apply button should be enable
-    cy.get(workListGadgetDom.apply).should('be.enabled');    
+    cy.get(workListGadgetDom.apply).should('be.enabled');
+    cy.addLog("Apply Button Should Enabled");
 
     cy.log("Apply is enabled")
     
@@ -73,9 +83,11 @@ describe("Working List Gadget With List of objects", function() {
     
     // In the 'List of Objects' field, enter any value 
     cy.get(workListGadgetDom.listObjectTextBox).clear();
+    cy.addLog("Clear List object Text Box")
 
     // Apply button should be disabled
     cy.get(workListGadgetDom.apply).should('be.disabled');
+    cy.addLog("Apply Button Disabled");
 
     cy.log("Apply is disabled");
 
@@ -93,6 +105,9 @@ describe("Working List Gadget With List of objects", function() {
     // In the 'List of Objects' field, enter any value 
     cy.get(workListGadgetDom.listObjectTextBox).clear()
     .type(workListGadgetValue.listObjectTextBoxValue).type(' ').type(workListGadgetValue.listObjectTextBoxValue2);
+    cy.addLog("Enter Two Different Values in list object Text Box : "+
+    workListGadgetValue.listObjectTextBoxValue +" "+ workListGadgetValue.listObjectTextBoxValue2);
+
 
     // Set Delimiter as ","
     cy.get(workListGadgetDom.delimiterTextBox).clear()
@@ -101,13 +116,17 @@ describe("Working List Gadget With List of objects", function() {
 
     // Apply button should be disabled
     cy.get(workListGadgetDom.apply).click({force:true});
+    cy.addLog("Select Apply");
 
     // Display message No Matching Object found
     cy.contains(workListGadgetValue.error1253).should('be.visible');
+    cy.addLog("Displaying Error : ", workListGadgetValue.error1253);
     cy.log("Displaying 1253 Error");
 
-    // logout from AMI
+    // Logout from AMI
+    cy.addLog("Trying to Logout");
     loginUtils.logoutFromAMI();
+    cy.addLog("Logout Sucessfully");
 
     cy.finish('AMI-2023:30');
     

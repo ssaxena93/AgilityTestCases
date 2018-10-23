@@ -11,10 +11,22 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+const fs = require('fs');
 
-// cypress/plugins/index.js
 module.exports = (on, config) => {
-    // on('task', {
-    //   failed: require('cypress-failed-log/src/failed')(),
-    // });
-  };
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
+  on('task', {
+    fileCheck() {
+      if (!fs.existsSync('cypress/logReport.txt')) {
+        fs.writeFile('cypress/logReport.txt', '', logs => {
+          console.log('logReport File Created');
+        });
+      } else {
+      }
+      return null;
+    }
+  });
+};
+
+

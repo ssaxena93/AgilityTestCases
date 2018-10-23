@@ -31,17 +31,22 @@ describe("Working List Gadget GUI", function() {
         cy.start("AMI-1994:1"); 
 
         // login in AMI
+        cy.addLog("Launch Browser with URL and trying to Login");
         loginUtils.loginToAMI(amiValue.amiLogin.username);
+        cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Working List Gadget (this workspace has the required browser gadgets)
+        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
+        cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
 
         // Open WorkList Gadget
+        cy.addLog("Open ", amiValue.anyGadget.workListGadget);
         anyGadgetUtils.openGadgetOrGroup(amiValue.anyGadget.workListGadget);
-
-        cy.log("Asserting working list gadget selection")
+        cy.addLog(amiValue.anyGadget.workListGadget+ " Opened Successfully");
 
         // Should consist of Filter by object type and it's Drop Down
+        cy.addLog("Should Consist of all Availble Options in Working list Gadget");
         cy.contains("Filter by Object Type:").should('be.visible');
         cy.get(workListGadgetDom.filterByObjectDropDown).should('be.visible');
 
@@ -68,8 +73,8 @@ describe("Working List Gadget GUI", function() {
 
         // Should consist of Select list after applying changes and check box
         cy.contains("Select list after applying changes?").should('be.visible');
-        // cy.get(workListGadgetDom.selectListCheckBox).should('exist').and('not.be.checked');
-
+        cy.get(workListGadgetDom.selectListCheckBox).should('exist').and('not.be.checked');
+       
         // Should consist of Use whitespace characters as delimiter? and Check Box
         cy.contains("Use whitespace characters as delimiter?").should('be.visible');
         cy.get(workListGadgetDom.whitespaceCharacterCheckBox).should('exist').and('not.be.checked');
@@ -79,9 +84,10 @@ describe("Working List Gadget GUI", function() {
         cy.get(workListGadgetDom.copyDescendantsCheckbox).should('exist').and('not.be.checked');
 
         // Should consist of Apply button in Disable state
-         cy.get(workListGadgetDom.apply).should('not.be.enabled');
+        cy.get(workListGadgetDom.apply).should('not.be.enabled');
+        cy.addLog("Displying all Availabe Options in Working List Gadget");
 
-         cy.finish("AMI-1994:1");
+        cy.finish("AMI-1994:1");
 
     });
 
@@ -92,13 +98,16 @@ describe("Working List Gadget GUI", function() {
         cy.start("AMI-1995:2"); 
 
         // Click on work list action menu
+        cy.addLog("Open Work List Action Menu")
         cy.get(workListGadgetDom.actionMenu).click({ force:true });
 
         // Displaying refresh
         cy.get(workListGadgetDom.actionMenuRefresh).should('exist').and('visible');
+        cy.addLog("Displaying Refresh")
 
         // Displaying Help
         cy.get(workListGadgetDom.actionMenuHelp).should('exist').and('visible');
+        cy.addLog("Displaying Help")
 
         cy.finish("AMI-1995:2"); 
 
@@ -110,8 +119,11 @@ describe("Working List Gadget GUI", function() {
 
         cy.start("AMI-1996:3");
 
-        // Click on refresh 
+        // Click on refresh
+        cy.addLog("Select Refresh")
         cy.get(workListGadgetDom.actionMenuRefresh).click({ force:true });
+        cy.addLog("Working List Gadget Refreshed")
+        
 
         cy.log("Working list gadget is refreshed");
 
@@ -127,11 +139,15 @@ describe("Working List Gadget GUI", function() {
         cy.get(workListGadgetDom.actionMenu).click({ force:true });
 
         // Click on Help
+        cy.addLog("Select Help Option")
         cy.get(workListGadgetDom.actionMenuHelp).click({ force:true });
         cy.log("Invalid Session Popup & Error:1098");
+        cy.addLog("Help Window Should Open")
 
         // Logout from AMI
+        cy.addLog("Trying to Logout");
         loginUtils.logoutFromAMI();
+        cy.addLog("Logout Sucessfully");
 
         cy.finish("AMI-1997:4");
 

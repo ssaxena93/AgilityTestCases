@@ -30,21 +30,29 @@ describe("Working List Gadget with List Elements DropDown", function() {
         cy.start('AMI-2001:8');
 
         // login in AMI
+        cy.addLog("Launch Browser with URL and trying to Login");
         loginUtils.loginToAMI(amiValue.amiLogin.username);
+        cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Working List Gadget (this workspace has the required browser gadgets)
+        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
+        cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
 
         // Open WorkList Gadget
+        cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
         anyGadgetUtils.openGadgetOrGroup(amiValue.anyGadget.workListGadget);
+        cy.addLog(amiValue.anyGadget.workListGadget +" Opened Successfully");
         
         // Should consist of list elements id
+        cy.addLog("Open List Elements DropDown");
         cy.get(workListGadgetDom.listElementsDropDown)
         .select(workListGadgetValue.listElementValue).should('have.value', "id");
 
         // Should consit of object Names
         cy.get(workListGadgetDom.listElementsDropDown)
         .select(workListGadgetValue.listElementName).should('have.value', "name");
+        cy.addLog("List Elements Drop Down Should Consist of  Object Id & object Names");
 
         cy.finish('AMI-2001:8');
 
@@ -57,22 +65,28 @@ describe("Working List Gadget with List Elements DropDown", function() {
         
         // Select id as list elmennt
         cy.get(workListGadgetDom.listElementsDropDown).select(workListGadgetValue.listElementValue).should('have.value', "id");
-
+        cy.addLog("Open List Elements DropDown and Select Object Id");
+        
         // Enter Alphabets only in list object's field
         cy.get(workListGadgetDom.listObjectTextBox).clear().type(workListGadgetValue.listObjectTextBoxValueAlphabets)
         .should('have.value', workListGadgetValue.listObjectTextBoxValueAlphabets);
+        cy.addLog("Select List object Text Box and Enter Any Alphabets : "+ workListGadgetValue.listObjectTextBoxValueAlphabets);
 
         // Click apply to submit
-        cy.get(workListGadgetDom.apply).click({ force:true })
+        cy.get(workListGadgetDom.apply).click({ force:true });
+        cy.addLog("Select Apply");
 
         // Should display error
         cy.contains(workListGadgetValue.error1253).should('be.visible');
+        cy.addLog("Displaying Error : "+ workListGadgetValue.error1253);
 
         // close the error
         cy.get(amiDom.amiLogin.errorClose).click( {force:true});
 
-        // Logout to AMI
+        // Logout from AMI
+        cy.addLog("Trying to Logout");
         loginUtils.logoutFromAMI();
+        cy.addLog("Logout Sucessfully");
 
         cy.finish('AMI-2002:9');
     
@@ -85,24 +99,35 @@ describe("Working List Gadget with List Elements DropDown", function() {
         cy.start('AMI-2003:10');
         
         // login in AMI
+        cy.addLog("Launch Browser with URL and trying to Login");
         loginUtils.loginToAMI(amiValue.amiLogin.username);
+        cy.addLog("Browser Launched with URL and Logged in Successfully");
         
         // Select Object Name as List element
         cy.get(workListGadgetDom.listElementsDropDown).select(workListGadgetValue.listElementName).should('have.value', "name");
+        cy.addLog("Open List Elements DropDown and Select Object Names");
 
         // Enter any Alphabets only
         cy.get(workListGadgetDom.listObjectTextBox).clear().type(workListGadgetValue.listObjectTextBoxValueAlphabets)
         .should('have.value', workListGadgetValue.listObjectTextBoxValueAlphabets);
+        cy.addLog("Select List object Text Box and Enter Any Alphabets : "+ workListGadgetValue.listObjectTextBoxValueAlphabets);
 
         // Click apply to submit
         cy.get(workListGadgetDom.apply).click({ force:true })
+        cy.addLog("Select Apply")
 
         // Display message No Matching Object found
         cy.contains(workListGadgetValue.error1259).should('be.visible');
+        cy.addLog("Displaying Error : "+ workListGadgetValue.error1259);
         cy.log("Displaying 1259 Error");
 
-        // Logout to AMI
+        // close the error
+        cy.get(amiDom.amiLogin.errorClose).click( {force:true});
+
+        // Logout from AMI
+        cy.addLog("Trying to Logout");
         loginUtils.logoutFromAMI();
+        cy.addLog("Logout Sucessfully");
 
         cy.finish('AMI-2003:10');
     });
