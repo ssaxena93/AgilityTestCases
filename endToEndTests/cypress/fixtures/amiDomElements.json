@@ -1,0 +1,106 @@
+{ 
+    "amiLogin" : 
+    {
+    "loginUsername": "#login-username",
+    "loginPassword" : "#login-password",
+    "existingSession" : ".title",
+    "ok" : "#ws-dialog-submit",
+    "cancel" : "#ws-dialog-cancel",
+    "ACMSWorkspaceSelectordropdown" : "#ACMS-Workspace-Selector-dropdown",
+    "addGadget" : "#ed-add-gadget",
+    "addGadgetList" : "#ed-addGadget-list",
+    "errorClose" : ".ws-notification-content > .mdi"
+    },
+
+    "tagRelationGadget": 
+    {
+        
+        "menu" : ".IndexGadget > .mdi-menu",
+        "copy" : "#ed-ws-param-copyIndexGadget_toolbar",
+        "paste" : "#ed-ws-param-pasteIndexGadget_toolbar",
+        "unlink" : "#ed-ws-param-unlinkIndexGadget_toolbar",
+        "reorder" : "#ed-ws-param-reorderIndexGadget_toolbar",
+        "options" : "#ed-ws-param-optionsIndexGadget_toolbar",
+        "refresh" : "#ed-ws-param-refresh_toolbar",
+        "help" : "input[id=ed-ws-param-help_toolbar]",
+        "lock" : "#ed-ws-param-lock_toolbar",
+        "save" : "#ed-edit-ok", 
+        "menuCopy" : "#ws-toolbar-IndexGadget-button-1",
+        "menuPaste" : "#ws-toolbar-IndexGadget-button-2",
+        "menuReorder" : "#ws-toolbar-IndexGadget-button-4",
+        "menuOptions" :"#ws-toolbar-IndexGadget-button-5",
+        "menuHelp" : "#ws-toolbar-IndexGadget-button-7",
+        "menuIcon" : "#Index-menu-icon",
+        "indexMenuCopy" : "#Index-menu-copy",
+        "indexMenuPaste" : "#Index-menu-paste",
+        "indexMenuHelp" : "#Index-menu-help",
+        "indexMenuOptions" : "#Index-menu-options",
+        "indexMenuReorder" : "#Index-menu-reorder",
+        "optionsPopUp" : "#ws-dialog-container_index-term-gadget_show-options",
+        "optionsCheckBox" : "#index-term-only-show",
+        "reorderReverse" : "#ws-reorderDialog-reverse" 
+    },
+
+    "pasteTagRelationWindow":
+    {
+      "unmapAll" : "#paste-dlg-btnUnmapAll",
+      "pasteRelation" : ".paste-relation-name",
+      "autoMap" : "#paste-dlg-btnAutomap",
+      "pasteCheckBox" : "#paste-dlg-checkbox"
+    },
+
+    "anyGadget":
+    {
+        "browserIcon" : "#ContextBrowser-0-menu-icon",
+        "browserIconCopy" :"#ws-toolbar-ContextBrowser-0-button-1",
+        "browserRefresh" : "#ContextBrowser-0-menu-refresh",
+        "clipboard" : "#Clipboard-show-icon",
+        "clipboardPrev" : "#cg-prev-btn > .mdi",
+        "clipboardNext" : "#cg-next-btn > .mdi",
+        "bagIndexCheck" : "#check-idx_975",
+        "cypressRelationTagCheck" : "#check-idx_1179",
+        "cypressRelationTagArrow" : "#arrow-idx_1179",
+        "jldSingleIdxId" : "input[id='check-idx_805']",
+        "jldSingleIdxArrow":"#arrow-idx_805",
+        "qaIndexId" : "#arrow-idx_286",
+        "qaIndexChair" : "#check-8-idx_1666-1652",
+        "mainIndexTermsId" :"#arrow-erd_1666",
+        "cantileverChairCheck" :"#check-5-idx_1666-1661",
+        "ravitagRelation" : "#arrow-idx_1219",
+        "add" : "#erd-btn-add",
+        "replace" : "#erd-btn-replace",
+        "remove" : "#erd-btn-remove"
+    },
+
+    "attribute":
+    {
+        "tool" : "Attribute Definitions",
+        "menu" : "Create Attribute Definition...",
+        "inputId" : "#attrDefnDlg_name",
+        "inputType" : "#attrDefnDlg_type"
+    },
+    "workListGadget":
+    {
+        "filterByObjectDropDown" : "#wl-obj-type",
+        "listElementsDropDown" :  "#wl-list-type",
+        "delimiterTextBox" : "#wl-list-delim",
+        "listObjectTextBox" : "#wl-id-list",
+        "applyListDropDown" : "#wl-list-select",
+        "showResultsDropDown" : "#wl-show-results",
+        "selectListCheckBox" : "input[name='wl-select-list-cb']",
+        "whitespaceCharacterCheckBox" : "#wl-whitespace-delim",
+        "copyDescendantsCheckbox" : "#wl-prop-cb",
+        "actionMenu" : "#WorkingList-menu-icon",
+        "actionMenuRefresh" : "#WorkingList-menu-refresh",
+        "actionMenuHelp" : "#WorkingList-menu-help",
+        "addDropDown" : "#wl-list-action",
+        "add": "Add",
+        "apply" : ".srch-list-btn",
+        "browserIcon" : "#ContextBrowser-0-show-icon",
+        "AddObjectName" : "#dialog-add-object-name",
+        "AddObjectSelect": "#dialog-add-object-select",
+        "workingListWindow" : ".WorkingListGadget > .ws-show-hide-icon",
+        "workingListObjectId" : "input[id='ed-ws-param-addToListStructureWorkingListGadget_27-id']",
+        "workingListCreateNewListCheckbox" : "#ed-ws-param-canCreateListWorkingListGadget_28"
+    }
+}
