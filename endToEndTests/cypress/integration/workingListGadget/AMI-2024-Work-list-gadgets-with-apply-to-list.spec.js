@@ -68,6 +68,10 @@ describe("Work list gadget Test Cases with apply to list dropdown", function() {
         cy.addLog("Displaying all Available Options in Working List");
 
         cy.get(amiDom.workListGadget.workingListObjectId).clear().type(amiValue.workListGadget.vQADBASEID);
+        
+        // Uncheck 'Can create new lists'
+        cy.get(amiDom.workListGadget.workingListCreateNewListCheckbox).uncheck();
+        cy.addLog("Uncheck On Create New List ");
 
         // Click ok to save Index Menu Options
         workSpaceEditorUtils.closeWorkspaceEditor();

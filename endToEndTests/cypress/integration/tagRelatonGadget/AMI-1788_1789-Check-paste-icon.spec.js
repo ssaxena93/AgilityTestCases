@@ -89,7 +89,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.get(amiDom.amiLogin.ok).click();
         cy.addLog(anyGadget.cantileverChair +" Child Object added Successfully");
 
-        //Veirify Cantilever Chair Tag Added
+        // Veirify Cantilever Chair Tag Added
         cy.addLog("Verify "+ anyGadget.cantileverChair +" Child Object Under "+ anyGadget.jldSingleIndex + " Check on");
         cy.wait(2000);
         cy.get(anyGadgetDom.jldSingleIdxArrow, {timeout:2000}).click();
@@ -134,7 +134,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
        and in the Tag relation gadget, 
        click on the Paste icon */
 
-    it.only("AMI-1789:13, Copied relation should get linked to the new object", function(){
+    it("AMI-1789:13, Copied relation should get linked to the new object", function(){
 
         cy.start('AMI-1789:13');
         

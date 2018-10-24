@@ -27,9 +27,11 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
 
     /* Select any Tag relation by selecting checkbox beside the Tag relation */
 
-    it("AMI-1783:7, Copy option should be disable state", function() {
+    /* Select any object which is linked to Tag relation by selecting checkbox beside the Object */
 
-        cy.start('AMI-1783:7');
+    it("AMI-1783:7 & AMI-1784:8, Copy option should be disable state & enabled state", function() {
+
+        cy.start('AMI-1783:7 & AMI-1784:8');
 
         // login in AMI
         cy.addLog("Launch Browser with URL and trying to Login");
@@ -70,16 +72,6 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
         cy.get(tagRelationGadgetDom.menuCopy, { force: true}).should('not.be.enabled');
         cy.addLog("Menu Copy is Disabale State");
 
-        cy.finish('AMI-1783:7');
-        
-    });
-
-    /* Select any object which is linked to Tag relation by selecting checkbox beside the Object */
-    
-    it("AMI-1784:8, Copy option should be in enabled state", function() {
-
-        cy.start('AMI-1784:8');
-        
         // Select QA Index
         cy.addLog("Select QA Index  and Check on Inside object");
         cy.get(amiDom.anyGadget.qaIndexId).click();
@@ -103,7 +95,7 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
         loginUtils.logoutFromAMI();
         cy.addLog("Logout Sucessfully");
 
-        cy.finish('AMI-1784:8');
+        cy.finish('AMI-1783:7 & AMI-1784:8');
         
     });
 

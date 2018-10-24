@@ -138,7 +138,16 @@ describe("Working List Gadget with Show Results DropDown", function() {
         cy.addLog("Select Apply");
 
         // O1 Should get linked with the list object
-        cy.get(amiDom.amiLogin.ok).click();
+        if (cy.get(amiDom.amiLogin.ok) === amiDom.amiLogin.ok) {
+
+            cy.get(amiDom.amiLogin.ok).click()
+        }
+        else{
+
+            cy.get(amiDom.amiLogin.cancel).click();
+
+        }
+       
         cy.get(amiDom.anyGadget.browserIcon).click();
         cy.get(amiDom.anyGadget.browserRefresh).click();
         cy.addLog("O1 Should get linked with the list object");
