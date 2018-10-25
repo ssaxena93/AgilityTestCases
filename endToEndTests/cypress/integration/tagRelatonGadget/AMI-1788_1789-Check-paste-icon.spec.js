@@ -57,7 +57,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         // Select browse gadget
         cy.addLog("Trying to Open "+ anyGadget.name +" Browse Gadget");
         anyGadgetUtils.openGadgetOrGroup(anyGadget.name);
-        cy.addLog(anyGadget.name +" Opend With List");
+        cy.addLog(anyGadget.name +" Opened With List");
 
         // Select Events in Browser Gadget
         cy.addLog("Select "+ anyGadget.type);
@@ -78,7 +78,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.contains(anyGadget.jldSingleIndex).click();
 
         // Click On Main Index Terms
-        cy.addLog("Object Window opend and add any Object");
+        cy.addLog("Object Window opened and add any Object");
         cy.get(anyGadgetDom.mainIndexTermsId).click();
 
         // Select Cantilever Chair and Add 
@@ -139,7 +139,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         // Select browse gadget
         cy.addLog("Trying to Open "+ anyGadget.name +" Browse Gadget");
         anyGadgetUtils.openGadgetOrGroup(anyGadget.name);
-        cy.addLog(anyGadget.name +" Opend With List");
+        cy.addLog(anyGadget.name +" Opened With List");
 
         // Select Events in Browser Gadget
         cy.addLog("Select "+ anyGadget.type);

@@ -43,7 +43,7 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     // Select browse gadget
     cy.addLog("Trying to Open "+ anyGadget.name +" Browse Gadget");
     anyGadgetUtils.openGadgetOrGroup(anyGadget.name);
-    cy.addLog(anyGadget.name +" Opend With List");
+    cy.addLog(anyGadget.name +" Opened With List");
 
     // Select Events in Browser Gadget
     cy.addLog("Select "+ anyGadget.type);

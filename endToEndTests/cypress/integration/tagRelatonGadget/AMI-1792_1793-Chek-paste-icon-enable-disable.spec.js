@@ -45,7 +45,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         // Select browse gadget
         cy.addLog("Trying to Open "+ anyGadget.name +" Browse Gadget");
         anyGadgetUtils.openGadgetOrGroup(anyGadget.name);
-        cy.addLog(anyGadget.name +" Opend With List");
+        cy.addLog(anyGadget.name +" Opened With List");
 
         // Click on tags
         cy.addLog('Select '+ anyGadget.tags);
