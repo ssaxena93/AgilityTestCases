@@ -4,7 +4,6 @@ const loginUtils = require('../../utils/ravi_utils/loginUtils');
 const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 
-
 // AMI Data Values file
 const amiValue = require('../../fixtures/amiDataValue');
 
@@ -26,6 +25,7 @@ function listObjectID(){
     cy.addLog("Select Object IDs in 'List element as' field.");
 
 }
+
 function listObjectName(){
 
     // Select any in filter by object type
@@ -66,9 +66,9 @@ describe("Working List Gadget With delimiter", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Working List Gadget (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.workListGadget);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
-        cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
+        cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
 
         // Open WorkList Gadget
         cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
@@ -239,11 +239,11 @@ describe("Working List Gadget With delimiter", function() {
         cy.finish('AMI-2008:15');
     });
 
-    /* 1.Select Any in 'Filter by Object Type' field. 
-     2.Select Object IDs in 'List element as' field. 
-     3.Set Delimiter as ' * ' . 
-     4.In the 'List of Objects' field, enter id's of two different object separated by ' * ' . 
-     5.Select Add and click Apply button.
+    /*  1.Select Any in 'Filter by Object Type' field. 
+        2.Select Object IDs in 'List element as' field. 
+        3.Set Delimiter as ' * ' . 
+        4.In the 'List of Objects' field, enter id's of two different object separated by ' * ' . 
+        5.Select Add and click Apply button.
     */
    
     it("AMI-2009:16, The object specified in 'List of objects' field should get linked with the list object.", function() {
@@ -358,11 +358,12 @@ describe("Working List Gadget With delimiter", function() {
         cy.finish('AMI-2011:18');
         
     });
-    /* 1.Select Any in 'Filter by Object Type' field. 
-           2.Select Object Names in 'List element as' field. 
-           3.Set Delimiter as ' ' . 
-           4.In the 'List of Objects' field, enter names of two different object separated by ' ' . 
-           5.Select Add and click Apply button. 
+
+    /*  1.Select Any in 'Filter by Object Type' field. 
+        2.Select Object Names in 'List element as' field. 
+        3.Set Delimiter as ' ' . 
+        4.In the 'List of Objects' field, enter names of two different object separated by ' ' . 
+        5.Select Add and click Apply button. 
     */
    
    it("AMI-2012:19, The object specified in 'List of objects' field should get linked with the list object.", function() {
@@ -404,7 +405,6 @@ describe("Working List Gadget With delimiter", function() {
        4.In the 'List of Objects' field, enter names of two different object separated by ' 2 ' . 
        5.Select Add and click Apply button. 
     */
-
     
     it("AMI-2013:20, The object specified in 'List of objects' field should get linked with the list object.", function() {
 
@@ -418,7 +418,6 @@ describe("Working List Gadget With delimiter", function() {
         .should('have.value', workListGadgetValue.delimiterTwo);
         cy.addLog(" Set Delimiter as : "+ workListGadgetValue.delimiterTwo);
         
-
         // In the 'List of Objects' field, enter names of two different object separated by ' 2 ' 
         cy.get(workListGadgetDom.listObjectTextBox).clear()
         .type(workListGadgetValue.listObjectTextBoxValueAlphabets).type(" ")

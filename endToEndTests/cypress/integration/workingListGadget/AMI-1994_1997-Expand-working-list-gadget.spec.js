@@ -36,17 +36,17 @@ describe("Working List Gadget GUI", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Working List Gadget (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.workListGadget);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
-        cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
+        cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
 
         // Open WorkList Gadget
-        cy.addLog("Open ", amiValue.anyGadget.workListGadget);
+        cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
         anyGadgetUtils.openGadgetOrGroup(amiValue.anyGadget.workListGadget);
-        cy.addLog(amiValue.anyGadget.workListGadget+ " Opened Successfully");
+        cy.addLog(amiValue.anyGadget.workListGadget +" Opened Successfully");
 
         // Should consist of Filter by object type and it's Drop Down
-        cy.addLog("Should Consist of all Availble Options in Working list Gadget");
+        cy.addLog("Should Consist of all available Options in Working list Gadget");
         cy.contains("Filter by Object Type:").should('be.visible');
         cy.get(workListGadgetDom.filterByObjectDropDown).should('be.visible');
 
@@ -123,11 +123,10 @@ describe("Working List Gadget GUI", function() {
         cy.addLog("Select Refresh")
         cy.get(workListGadgetDom.actionMenuRefresh).click({ force:true });
         cy.addLog("Working List Gadget Refreshed")
-        
-
         cy.log("Working list gadget is refreshed");
 
         cy.finish("AMI-1996:3");
+        
     });
 
     /* Click on help option. */

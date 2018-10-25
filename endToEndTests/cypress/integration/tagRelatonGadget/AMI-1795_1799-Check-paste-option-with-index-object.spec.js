@@ -5,7 +5,6 @@ const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const browserGadgetUtils = require('../../utils/ravi_utils/browserGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 
-
 // AMI Data Values file
 const amiValue = require('../../fixtures/amiDataValue');
 
@@ -28,7 +27,6 @@ function copiedChidObjects(){
     cy.contains('High Back Manager Chair').should('be.visible');
     cy.contains('Task Chair:Manager Chair').should('be.visible');
 };
-
 
 describe("Check Pate Icon Options in Tag Relations Gadget", function() {
 
@@ -58,7 +56,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
         cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
@@ -73,7 +71,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog(anyGadget.type +" Displayng with List Of Objects");
 
         // Select !! QA Data to from Events in Browser Gadget
-        cy.addLog("Select "+ anyGadget.browseContext+ " Object");
+        cy.addLog("Select "+ anyGadget.browseContext +" Object");
         browserGadgetUtils.setBrowseContext(anyGadget.browseContext);
 
         // Open Tag Relations Gadget
@@ -112,6 +110,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog("Only Index object should get linked with selected / mapped Tag relation");
    
         cy.finish('AMI-1795:19');
+
     });
 
     /* Copy a Index object from Tag browser and select any object from Browse gadget, 
@@ -149,7 +148,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.get(pasteTagRelationWindowDom.pasteCheckBox).should('be.visible');
         cy.contains("Only show dialog when auto map fails").should('be.visible');
 
-        // copied object Should Mapped with Select objects
+        // copied object Should Mapped with Select object
         cy.get(pasteTagRelationWindowDom.pasteRelation).should('be.visible');
         cy.addLog("Displaying all Available Options in Paste Relation Window");
 
@@ -169,7 +168,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
 
         // Displaying objects in unmaped column
         cy.get(pasteTagRelationWindowDom.pasteRelation).should('be.visible');
-        cy.addLog("The objects are Present in Unmapped Column")
+        cy.addLog("The objects are Present in Unmapped Column");
 
         // Click cancel to exit from paste tag relation window
         cy.get(amiDom.amiLogin.cancel).click();
@@ -180,10 +179,9 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         loginUtils.logoutFromAMI();
         cy.addLog("Logout Sucessfully");
     
-        cy.finish('AMI-1799:23')
+        cy.finish('AMI-1799:23');
         
     });
 
-    
 });
 

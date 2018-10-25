@@ -37,7 +37,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
         cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
@@ -60,9 +60,8 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         anyGadgetUtils.openGadgetOrGroup(anyGadget.tagRelation);
         cy.addLog("Displaying "+ anyGadget.browseContext +" Objects in "+ anyGadget.tagRelation +" Gadget");
 
-
         // Select Qa Index object
-        cy.addLog('Select QA Index and Check on Child Object, Do Copy and Paste');
+        cy.addLog("Select QA Index and Check on Child Object, Do Copy and Paste");
         cy.get(anyGadgetDom.qaIndexId).click();
 
         // Select inside Qa index and Check
@@ -279,6 +278,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog("Logout Sucessfully");
 
         cy.finish('AMI-1808:32, AMI-1809:33 & AMI-1810:34');
+        
     });
     
 });

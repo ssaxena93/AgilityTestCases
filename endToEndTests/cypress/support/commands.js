@@ -80,10 +80,10 @@ Cypress.Commands.add('getGadgetHamburgerMenuItem', {prevSubject: true}, (subject
 */
 
 Cypress.Commands.add('logger', function(logtoAppend, status) {
-    if (status === 'pass') {
+    if (status === 'started') {
         logtoAppend = logtoAppend + ' ' + 'Test Execution is Started';
     }
-    else if (status === 'fail') {
+    else if (status === 'finished') {
         logtoAppend = logtoAppend + ' ' + 'Test Execution is Finished Successfully';
     }
 
@@ -130,7 +130,7 @@ Cypress.Commands.add('logHeader', function(heading) {
 */
 
 Cypress.Commands.add('start', function(logtoAppend) {
-    cy.logger(logtoAppend, 'pass');
+    cy.logger(logtoAppend, 'started');
 });
 
 /* 
@@ -139,7 +139,7 @@ Cypress.Commands.add('start', function(logtoAppend) {
     ex: 10/18/2018, 7:29:59 PM : AMI-2027:34 Test Execution is Finished Successfully
 */
 Cypress.Commands.add('finish', function(logtoAppend) {
-    cy.logger(logtoAppend, 'fail');
+    cy.logger(logtoAppend, 'finished');
 });
 
 /* 

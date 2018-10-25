@@ -29,14 +29,14 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
         let anyGadget = amiValue.anyGadget;
 
         // login in AMI
-        cy.addLog("Launch Browser with URL and trying to Login")
+        cy.addLog("Launch Browser with URL and trying to Login");
         loginUtils.loginToAMI(amiValue.amiLogin.username);
-        cy.addLog("Browser Launched with URL and Logged in Successfully")
+        cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
-        cy.addLog(amiValue.amiLogin.changeWorkspace+ " Changed Successfully");
+        cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
         // Open Tag Relations Gadget
         cy.addLog("Trying to open "+ anyGadget.tagRelation+ " Attribute");
@@ -46,12 +46,12 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
         // Click On Help Icon
         cy.log("Help icon will be open in  new window tab, cypress don't have support for multitabs");
 
-        // Verify Help option availble in menu
+        // Verify Help option available in menu
         cy.addLog("Verify And Select Help Icon in Tag Relation Attribute");
         cy.get(amiDom.tagRelationGadget.menuIcon).click();
-        cy.get(amiDom.tagRelationGadget.indexMenuHelp).should('exist')
+        cy.get(amiDom.tagRelationGadget.indexMenuHelp).should('exist');
         cy.get(amiDom.tagRelationGadget.menuHelp).click();
-        cy.addLog("Help Window opened successfuly");
+        cy.addLog("Help Window opened successfully");
 
         // Logout from AMI
         cy.addLog("Trying to Logout");

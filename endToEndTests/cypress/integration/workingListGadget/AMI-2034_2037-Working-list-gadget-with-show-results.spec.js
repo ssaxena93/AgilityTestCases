@@ -4,7 +4,6 @@ const loginUtils = require('../../utils/ravi_utils/loginUtils');
 const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 
-
 // AMI Data Values file
 const amiValue = require('../../fixtures/amiDataValue');
 
@@ -34,9 +33,9 @@ describe("Working List Gadget with Show Results DropDown", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Working List Gadget (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.workListGadget);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
-        cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
+        cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
  
         // Open WorkList Gadget
         cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
@@ -77,7 +76,6 @@ describe("Working List Gadget with Show Results DropDown", function() {
 
         cy.finish('AMI-2035:42');
 
-
     });
 
     /* Select 'Only when there are errors' in Show result drop down. */
@@ -92,7 +90,6 @@ describe("Working List Gadget with Show Results DropDown", function() {
         cy.addLog("Select Show Results DropDown Has Value : "+ workListGadgetValue.showResultsOnlyErrors);
 
         cy.finish('AMI-2036:43');
-
 
     });
 

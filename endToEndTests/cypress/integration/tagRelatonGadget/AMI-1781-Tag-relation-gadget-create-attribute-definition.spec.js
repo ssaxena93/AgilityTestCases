@@ -64,7 +64,7 @@ describe("Tag Relation Gadget Create Attribute Definition AMI-1781:5", function(
         cy.addLog(amiValue.attribute.name +" Attribute Created");
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
         cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
@@ -79,7 +79,7 @@ describe("Tag Relation Gadget Create Attribute Definition AMI-1781:5", function(
         cy.addLog(anyGadget.type +" Displayng with List Of Objects");
 
         // Select !! QA Data to from Events in Browser Gadget
-        cy.addLog("Select "+ anyGadget.browseContext+ "object");
+        cy.addLog("Select "+ anyGadget.browseContext +" object");
         browserGadgetUtils.setBrowseContext(anyGadget.browseContext);
 
         // Open Tag Relations Gadget

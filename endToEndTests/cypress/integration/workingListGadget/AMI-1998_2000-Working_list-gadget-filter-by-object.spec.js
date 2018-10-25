@@ -33,9 +33,9 @@ describe("Working List Gadget with Filter By object Type", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Working List Gadget (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.workListGadget);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
-        cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
+        cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
 
         // Open WorkList Gadget
         cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
@@ -45,10 +45,12 @@ describe("Working List Gadget with Filter By object Type", function() {
         // Select filter by objects dropdown
         cy.addLog("Filter by Object Drop Down Should Exist");
         cy.get(workListGadgetDom.filterByObjectDropDown).should('have.value', '');
-        cy.addLog("Availble Options are Present in DropDown");
+        cy.addLog("Available Options are Present in DropDown");
         
         // Logout from AMI
+        cy.addLog("Trying to Logout");
         loginUtils.logoutFromAMI();
+        cy.addLog("Logout Sucessfully");
 
         cy.finish("AMI-1998:5");
 
@@ -62,7 +64,9 @@ describe("Working List Gadget with Filter By object Type", function() {
         cy.start("AMI-1999:6");
 
         // login in AMI
+        cy.addLog("Launch Browser with URL and trying to Login");
         loginUtils.loginToAMI(amiValue.amiLogin.username);
+        cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Select group in filter by object type field
         cy.addLog("Select Group in Filter by Object");

@@ -36,7 +36,7 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     cy.addLog("Browser Launched with URL and Logged in Successfully");
 
     // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-    cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+    cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
     changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
     cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
@@ -87,18 +87,18 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
   });
 
   /* Select Options */
-
+  
   it("AMI-1821:45, Tag Relation Gadget Options window should open with Only "+  
-      "show paste dialog when auto map fails checkbox, OK, cancel buttons, "+
-      "Close icon", function() {
-
+     "show paste dialog when auto map fails checkbox, OK, cancel buttons, "+
+     "Close icon", function() {
+       
     cy.start('AMI-1821:45');
-
-    cy.addLog("Trying to open Tag Relation Gadget Options")
+      
+    cy.addLog("Trying to open Tag Relation Gadget Options");
 
     // Click on index menu icon
     cy.get(amiDom.tagRelationGadget.menuIcon).click();
-        
+          
     // Click on options in Menu
     cy.get(amiDom.tagRelationGadget.indexMenuOptions).click();
     cy.addLog("Tag Relation Gadget Options opened")
@@ -114,6 +114,7 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     cy.addLog('Cancel is present');
 
     cy.finish('AMI-1821:45');
+
   });
 
   /* Click on Cancel Close icon */
@@ -123,13 +124,12 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     cy.start('AMI-1822:46');
 
     cy.addLog("Trying to close Tag Relation Gadget Options");
-    
     // Click on Cancel 
     cy.get(amiDom.amiLogin.cancel).click();
-
     cy.addLog("Tag Relation Gadget Options closed");
 
     cy.finish('AMI-1822:46');
+
   });
 
   /* Uncheck/check Only show paste dialog when auto map fails 
@@ -155,6 +155,7 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     cy.get(amiDom.amiLogin.ok).click();
 
     cy.finish('AMI-1823:47');
+
   });
 
   /* Select objects linked to the Multi-instance tag relation 

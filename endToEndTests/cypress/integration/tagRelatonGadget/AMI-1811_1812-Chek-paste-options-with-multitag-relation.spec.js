@@ -5,7 +5,6 @@ const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const browserGadgetUtils = require('../../utils/ravi_utils/browserGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 
-
 // AMI Data Values file
 const amiValue = require('../../fixtures/amiDataValue');
 
@@ -38,9 +37,9 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
-        cy.addLog(amiValue.amiLogin.changeWorkspace, +" Changed Successfully");
+        cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
         // Select browse gadget
         cy.addLog("Trying to Open "+ anyGadget.name +" Browse Gadget");
@@ -53,7 +52,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
 
         // Select Any Browser Object from Browser gadget
         cy.addLog("Select any Browse Gadget");
-        browserGadgetUtils.setBrowseContext('QA Index/Pomme');
+        browserGadgetUtils.setBrowseContext("QA Index/Pomme");
         cy.contains("Pomme").click();
 
         // Open Tag Relations Gadget
@@ -62,11 +61,11 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog("Displaying "+ anyGadget.browseContext +" Objects in "+ anyGadget.tagRelation +" Gadget");
 
         // Select copy option on Browser Gadget menu
-        cy.addLog("Select Copy on Browser Options")
+        cy.addLog("Select Copy on Browser Options");
         cy.get(anyGadgetDom.browserIconCopy).click();
 
         // Click on tags to minimize
-        cy.addLog('Select '+ anyGadget.tags +"to Minimize")
+        cy.addLog('Select '+ anyGadget.tags +"to Minimize");
         browserGadgetUtils.setStructureType(anyGadget.tags);
 
         // Select Events in Browser Gadget
@@ -89,14 +88,14 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
 
         // Click ok submit
         cy.get(amiDom.amiLogin.ok).click();
-        cy.addLog("Select Ok to Submit")
+        cy.addLog("Select Ok to Submit");
         cy.wait(1000);
 
         // Verify Presence
         cy.contains("Pomme").should('be.visible');
 
         // Select tag gadget
-        cy.addLog("Select any tag gadget and Add New Child Object")
+        cy.addLog("Select any tag gadget and Add New Child Object");
         cy.contains(amiValue.attribute.inputValue).click();
 
         // Click On Main Index Terms
@@ -111,11 +110,11 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         // Click ok submit
         cy.get(amiDom.amiLogin.ok).click();
         cy.wait(1000);
-        cy.addLog('Should be replace with New child')
+        cy.addLog('Should be replace with New child');
 
         // Replace Tag Should be visible
         cy.contains(anyGadget.cantileverChair).should('be.visible');
-        cy.addLog("Relace Child : "+ anyGadget.cantileverChair)
+        cy.addLog("Relace Child : "+ anyGadget.cantileverChair);
 
         // Select tag gadget Again
         cy.contains(amiValue.attribute.inputValue).click();
@@ -138,7 +137,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
 
         // Click ok submit
         cy.get(amiDom.amiLogin.ok).click();
-        cy.addLog("Childs are Removed")
+        cy.addLog("Childs are Removed");
 
         // Logout from AMI
         cy.addLog("Trying to Logout");

@@ -34,9 +34,9 @@ describe("Working List Gadget With List of objects", function() {
     cy.addLog("Browser Launched with URL and Logged in Successfully");
 
     // Open QA Working List Gadget (this workspace has the required browser gadgets)
-    cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
+    cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.workListGadget);
     changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
-    cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
+    cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
 
     // Open WorkList Gadget
     cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
@@ -63,7 +63,7 @@ describe("Working List Gadget With List of objects", function() {
     // In the 'List of Objects' field, enter any value 
     cy.get(workListGadgetDom.listObjectTextBox).clear().type(workListGadgetValue.listObjectTextBoxValue)
     .should('have.value', workListGadgetValue.listObjectTextBoxValue);
-    cy.addLog("Enter any Value in List object Text Box : ", workListGadgetValue.listObjectTextBoxValue);
+    cy.addLog("Enter any Value in List object Text Box : "+ workListGadgetValue.listObjectTextBoxValue);
 
     // Apply button should be enable
     cy.get(workListGadgetDom.apply).should('be.enabled');
@@ -108,7 +108,6 @@ describe("Working List Gadget With List of objects", function() {
     cy.addLog("Enter Two Different Values in list object Text Box : "+
     workListGadgetValue.listObjectTextBoxValue +" "+ workListGadgetValue.listObjectTextBoxValue2);
 
-
     // Set Delimiter as ","
     cy.get(workListGadgetDom.delimiterTextBox).clear()
     .type(workListGadgetValue.delimiterDefault)
@@ -120,7 +119,7 @@ describe("Working List Gadget With List of objects", function() {
 
     // Display message No Matching Object found
     cy.contains(workListGadgetValue.error1253).should('be.visible');
-    cy.addLog("Displaying Error : ", workListGadgetValue.error1253);
+    cy.addLog("Displaying Error : "+ workListGadgetValue.error1253);
     cy.log("Displaying 1253 Error");
 
     // Logout from AMI

@@ -5,7 +5,6 @@ const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 const workSpaceEditorUtils = require('../../utils/ravi_utils/workspaceEditorUtils');
 
-
 // AMI Data Values file
 const amiValue = require('../../fixtures/amiDataValue');
 
@@ -35,9 +34,9 @@ describe("Work list gadget Test Cases with apply to list dropdown", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Working List Gadget (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.workListGadget);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
-        cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
+        cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
 
         // Open WorkList Gadget
         cy.addLog("Open "+ amiValue.anyGadget.workListGadget);

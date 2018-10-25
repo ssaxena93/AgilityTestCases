@@ -5,7 +5,6 @@ const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 const browserGadgetUtils = require('../../utils/ravi_utils/browserGadgetUtils');
 
-
 // AMI Data Values file
 const amiValue = require('../../fixtures/amiDataValue');
 

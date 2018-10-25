@@ -6,7 +6,6 @@ const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils'
 const browserGadgetUtils = require('../../utils/ravi_utils/browserGadgetUtils');
 const workSpaceEditorUtils = require('../../utils/ravi_utils/workspaceEditorUtils');
 
-
 // AMI Data Values file
 const amiValue = require('../../fixtures/amiDataValue');
 
@@ -37,30 +36,30 @@ describe("Work list gadget Test Cases with apply to list dropdown", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Working List Gadget (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.workListGadget);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
-        cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
+        cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
 
         // Open WorkList Gadget
         cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
         anyGadgetUtils.openGadgetOrGroup(amiValue.anyGadget.workListGadget);
         cy.addLog(amiValue.anyGadget.workListGadget +" Opened Successfully");
 
-         // Edit current workspace
-         changeDropdownUtils.openWorkspaceEditor();
-         cy.addLog("Edit Workspace");
+        // Edit current workspace
+        changeDropdownUtils.openWorkspaceEditor();
+        cy.addLog("Edit Workspace");
+        
+        // Open Working List 
+        cy.get(amiDom.workListGadget.workingListWindow).click();
+        cy.addLog("Open Working List Window");
  
-         // Open Working List 
-         cy.get(amiDom.workListGadget.workingListWindow).click();
-         cy.addLog("Open Working List Window");
+        // check 'Can create new lists'
+        cy.get(amiDom.workListGadget.workingListCreateNewListCheckbox).uncheck().check().should('be.checked');
+        cy.addLog("Check On Create New List ");
  
-         // check 'Can create new lists'
-         cy.get(amiDom.workListGadget.workingListCreateNewListCheckbox).uncheck().check().should('be.checked');
-         cy.addLog("Check On Create New List ");
- 
-         // Click ok to save Index Menu Options
-         workSpaceEditorUtils.closeWorkspaceEditor();
-         cy.addLog("Save Workspace");
+        // Click ok to save Index Menu Options
+        workSpaceEditorUtils.closeWorkspaceEditor();
+        cy.addLog("Save Workspace");
  
         // Select New option from Apply list Drop Down
         cy.get(workListGadgetDom.applyListDropDown).select(amiValue.workListGadget.new)
@@ -98,7 +97,6 @@ describe("Work list gadget Test Cases with apply to list dropdown", function() {
         // Should consist of add and selected check box
         cy.get(amiDom.workListGadget.AddObjectSelect).uncheck().should('not.be.checked');
         cy.addLog("Displaying selected Check Box");
-
 
         // Should consist of disabled ok and enabled Cancel
         cy.get(amiDom.amiLogin.ok).should('be.disabled');

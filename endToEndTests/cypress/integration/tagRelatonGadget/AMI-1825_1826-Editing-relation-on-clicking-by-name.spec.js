@@ -37,7 +37,7 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     cy.addLog("Browser Launched with URL and Logged in Successfully");
 
     // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-    cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+    cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
     changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
     cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
@@ -68,7 +68,7 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     cy.wrap(amiValue.editingRelationName.tagRelationAssertion).each(elem => {
         cy.contains(elem).should('be.visible');
         cy.addLog(elem + ' is Present');
-      });
+    });
 
     // Verifying Remove, Replace, Add, and Ok butoons disable state 
     cy.wrap(amiValue.editingRelationName.tagRelationAssertionDisable).each(elem => {
@@ -83,6 +83,7 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     cy.addLog(amiDom.amiLogin.cancel + ' is in enable state');
 
     cy.finish('AMI-1825:49');
+    
   });
 
   /* 1.Click on the relation attribute. 

@@ -5,13 +5,11 @@ const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const browserGadgetUtils = require('../../utils/ravi_utils/browserGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 
-
 // AMI Data Values File
 const amiValue = require('../../fixtures/amiDataValue');
 
 // AMI DOM Elements File
 const amiDom = require('../../fixtures/amiDomElements');
-
 
 describe("Checking Menu Options in Tag Relations Gadget", function() {
 
@@ -39,7 +37,7 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
         cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
@@ -54,7 +52,7 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
         cy.addLog(anyGadget.type +" Displayng with List Of Objects");
 
         // Select !! QA Data to from Events in Browser Gadget
-        cy.addLog("Select "+ anyGadget.browseContext+ "object");
+        cy.addLog("Select "+ anyGadget.browseContext+ " object");
         browserGadgetUtils.setBrowseContext(anyGadget.browseContext);
 
         // Open Tag Relations Gadget
@@ -77,7 +75,7 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
         cy.addLog(anyGadget.cantileverChair," Child Object added Successfully");
 
         //Veirify Cantilever Chair Tag Added
-        cy.addLog("Verify "+ anyGadget.cantileverChair," Child Object Under "+ anyGadget.jldSingleIndex, " and Check on");
+        cy.addLog("Verify "+ anyGadget.cantileverChair +" Child Object Under "+ anyGadget.jldSingleIndex +" and Check on");
         cy.wait(2000);
         cy.get(anyGadgetDom.jldSingleIdxArrow, {timeout:2000}).click();
         cy.contains(anyGadget.cantileverChair).should('be.visible');   
@@ -112,7 +110,6 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
         cy.log("Removed the linked tag relation");
         cy.addLog("Child Object Removed Successfully");
         
-
         cy.finish('AMI-1785:9');
         
     });

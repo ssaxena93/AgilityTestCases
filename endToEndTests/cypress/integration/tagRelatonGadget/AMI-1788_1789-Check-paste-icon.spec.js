@@ -5,13 +5,11 @@ const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const browserGadgetUtils = require('../../utils/ravi_utils/browserGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 
-
 // AMI Data Values File
 const amiValue = require('../../fixtures/amiDataValue');
 
 // AMI DOM Elements File
 const amiDom = require('../../fixtures/amiDomElements');
-
 
 describe("Check Pate Icon Options in Tag Relations Gadget", function() {
 
@@ -51,10 +49,10 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
 
         cy.start('AMI-1788:12');
 
-        // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
-        changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
-        cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
+       // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
+       cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
+       changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
+       cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
         // Select browse gadget
         cy.addLog("Trying to Open "+ anyGadget.name +" Browse Gadget");
@@ -67,7 +65,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog(anyGadget.type +" Displayng with List Of Objects");
 
         // Select !! QA Data to from Events in Browser Gadget
-        cy.addLog("Select "+ anyGadget.browseContext+ "object");
+        cy.addLog("Select "+ anyGadget.browseContext+ " object");
         browserGadgetUtils.setBrowseContext(anyGadget.browseContext);
 
         // Open Tag Relations Gadget
@@ -176,4 +174,5 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
     
         cy.finish('AMI-1789:13');
     });
+    
 });

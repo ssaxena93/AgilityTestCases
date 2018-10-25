@@ -5,13 +5,11 @@ const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const browserGadgetUtils = require('../../utils/ravi_utils/browserGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 
-
 // AMI Data Values File
 const amiValue = require('../../fixtures/amiDataValue');
 
 // AMI DOM Elements File
 const amiDom = require('../../fixtures/amiDomElements');
-
 
 describe("Checking Menu Options in Tag Relations Gadget", function() {
 
@@ -39,7 +37,7 @@ describe("Checking Menu Options in Tag Relations Gadget", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
         cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 

@@ -5,7 +5,6 @@ const anyGadgetUtils = require('../../utils/ravi_utils/anyGadgetUtils');
 const browserGadgetUtils = require('../../utils/ravi_utils/browserGadgetUtils');
 const changeDropdownUtils = require('../../utils/ravi_utils/changeDropdownUtils');
 
-
 // AMI Data Values file
 const amiValue = require('../../fixtures/amiDataValue');
 
@@ -39,7 +38,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
         cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
@@ -55,14 +54,13 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         
         // Select Any Browser Object from Browser gadget
         cy.addLog("Select any Object from Tags");
-        browserGadgetUtils.setBrowseContext('QA Index/Pomme');
+        browserGadgetUtils.setBrowseContext("QA Index/Pomme");
         cy.contains("Pomme").click();
 
         // Open Tag Relations Gadget
         cy.addLog("Trying to open "+ anyGadget.tagRelation +" Gadget");
         anyGadgetUtils.openGadgetOrGroup(anyGadget.tagRelation);
         cy.addLog("Displaying "+ anyGadget.browseContext +" Objects in "+ anyGadget.tagRelation +" Gadget");
-        
 
         // Select copy option on Browser Gadget menu
         cy.addLog('Select Copy & Paste Options should be enabled');

@@ -36,7 +36,7 @@ describe("Tag Relation Gadget With Check Pate Icon Options in Tag Relations Gadg
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
         cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
 
@@ -51,7 +51,7 @@ describe("Tag Relation Gadget With Check Pate Icon Options in Tag Relations Gadg
         cy.addLog(anyGadget.type +" Displayng with List Of Objects");
 
         // Select Any Browser Object from Browser gadget
-        browserGadgetUtils.setBrowseContext('!!Demo Catalog/sara');
+        browserGadgetUtils.setBrowseContext("!!Demo Catalog/sara");
 
         // Open Tag Relations Gadget
         cy.addLog("Trying to open "+ anyGadget.tagRelation +" Gadget");
@@ -72,7 +72,7 @@ describe("Tag Relation Gadget With Check Pate Icon Options in Tag Relations Gadg
 
         // Select Any Browser Object from Browser gadget
         cy.addLog("Select any Object");
-        browserGadgetUtils.setBrowseContext('QA Index/Pomme');
+        browserGadgetUtils.setBrowseContext("QA Index/Pomme");
         cy.contains("Pomme").click();
 
         // Select copy option on Browser Gadget menu
@@ -109,6 +109,7 @@ describe("Tag Relation Gadget With Check Pate Icon Options in Tag Relations Gadg
         cy.addLog("Logout Sucessfully");
 
         cy.finish('AMI-1794:18');
+        
     });
 
 });

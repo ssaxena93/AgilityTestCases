@@ -30,9 +30,9 @@ describe("Working List Gadget with Use whitespace characters as delimiter?", fun
     cy.addLog("Browser Launched with URL and Logged in Successfully");
 
     // Open QA Working List Gadget (this workspace has the required browser gadgets)
-    cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
+    cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.workListGadget);
     changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
-    cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
+    cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
 
     // Open WorkList Gadget
     cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
@@ -75,6 +75,7 @@ describe("Working List Gadget with Use whitespace characters as delimiter?", fun
     5.The object id's are separated by tabs. 
     6.Select Add and click on Apply. 
   */
+
   it("AMI-2016:23, The specified object should get linked with list object.", function() {
 
     cy.start('AMI-2016:23');
@@ -105,6 +106,7 @@ describe("Working List Gadget with Use whitespace characters as delimiter?", fun
     cy.addLog("Select Add & Apply");
 
     cy.finish('AMI-2016:23');
+
   });
 
   /*1.Enter the two object id's in two different rows of excel. 
@@ -132,7 +134,6 @@ describe("Working List Gadget with Use whitespace characters as delimiter?", fun
     cy.get(workListGadgetDom.apply).click({ force:true });
     cy.addLog("Select Add & Apply");
 
-
     // Display message No Matching Object found
     cy.contains(workListGadgetValue.error1259).should('be.visible');
     cy.log("Displaying 1259 Error");
@@ -142,6 +143,7 @@ describe("Working List Gadget with Use whitespace characters as delimiter?", fun
     cy.get(amiDom.amiLogin.errorClose).click( {force:true});
 
     cy.finish('AMI-2017:24');
+
   });
 
   /*1.Enter the two different object names in two different column of excel. 
@@ -226,7 +228,6 @@ describe("Working List Gadget with Use whitespace characters as delimiter?", fun
     cy.get(workListGadgetDom.apply).click({ force:true });
     cy.addLog("Select Add & Apply");
 
-
     cy.finish('AMI-2019:26');
     
   });
@@ -239,7 +240,7 @@ describe("Working List Gadget with Use whitespace characters as delimiter?", fun
     
     // Un check Use whitespace characters as delimiter checkbox
     cy.get(workListGadgetDom.whitespaceCharacterCheckBox).uncheck().should('not.be.checked');
-    cy.addLog("Uncheck whitespace characters as delimiter checkbox")
+    cy.addLog("Uncheck whitespace characters as delimiter checkbox");
 
     // delimiter should be enabled
     cy.get(workListGadgetDom.delimiterTextBox).should('be.enabled');

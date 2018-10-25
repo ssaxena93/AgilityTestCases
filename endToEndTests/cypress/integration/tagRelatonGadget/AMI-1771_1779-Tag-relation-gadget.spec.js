@@ -54,12 +54,12 @@ describe("Tag Relation Gadget from AMI-1771:1 to AMI-1781:5", function() {
         let tagRelationGadget = amiDom.tagRelationGadget;
 
         // Open QA Attribute Gadget workspace (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.changeWorkspace);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.changeWorkspace);
         cy.addLog(amiValue.amiLogin.changeWorkspace +" Changed Successfully");
                 
         // Edit QA Attribute Gadget workspace
-        cy.log("Editing "+ amiValue.amiLogin.changeWorkspace)
+        cy.log("Editing "+ amiValue.amiLogin.changeWorkspace);
         changeDropdownUtils.openWorkspaceEditor();
 
         // Click Add gadget
@@ -81,34 +81,34 @@ describe("Tag Relation Gadget from AMI-1771:1 to AMI-1781:5", function() {
         cy.pause();
         
         // Click TagRelation Index Menu
-        cy.addLog("Select Index Action Menu Options from Tag Relation Gadget ");
+        cy.addLog("Select Index Action Menu Options from Tag Relation Gadget");
         cy.get(tagRelationGadget.menu).click();
         cy.addLog("Displaying all Avialble options in Index Action Menu");
-        cy.log('checking the tag relation options')
+        cy.log('checking the tag relation options');
 
-        // Click copy check box Availbale on Index menu
-        cy.addLog("Check on All Availabe Index Menu Options")
+        // Click copy check box Available on Index menu
+        cy.addLog("Check on All Available Index Menu Options");
         cy.get(tagRelationGadget.copy).check().should('be.checked');
         
-        // Click paste check box Availbale on Index menu
+        // Click paste check box Available on Index menu
         cy.get(tagRelationGadget.paste).check().should('be.checked');
 
-        // Click unlink check box Availbale on Index menu
+        // Click unlink check box Available on Index menu
         cy.get(tagRelationGadget.unlink).check().should('be.checked');
 
-        // Click reorder check box Availbale on Index menu
+        // Click reorder check box Available on Index menu
         cy.get(tagRelationGadget.reorder).check().should('be.checked');
         
-        // Click options check box Availbale on Index menu
+        // Click options check box Available on Index menu
         cy.get(tagRelationGadget.options).check().should('be.checked');
 
-        // click refresh check box Availbale on Index menu
+        // click refresh check box Available on Index menu
         cy.get(tagRelationGadget.refresh).check().should('be.checked');
 
-        // Click help check box Availbale on Index menu
+        // Click help check box Available on Index menu
         cy.get(tagRelationGadget.help).check().should('be.checked');
 
-        // Click lock to current project check box Availbale on Index menu
+        // Click lock to current project check box Available on Index menu
         cy.get(tagRelationGadget.lock).check().should('be.checked');
         cy.addLog("Checked All Available Options in Index Action Menu");
 

@@ -37,14 +37,14 @@ describe("Work list gadget Test Cases with apply to list dropdown", function() {
         cy.addLog("Browser Launched with URL and Logged in Successfully");
 
         // Open QA Working List Gadget (this workspace has the required browser gadgets)
-        cy.addLog("Trying to Change Worksapce to "+ amiValue.amiLogin.workListGadget);
+        cy.addLog("Trying to Change Workspace to "+ amiValue.amiLogin.workListGadget);
         changeDropdownUtils.changeWorkspace(amiValue.amiLogin.workListGadget);
-        cy.addLog(amiValue.amiLogin.workListGadget +" Changed Successfully");
-
+        cy.addLog(amiValue.amiLogin.workListGadget+ " Changed Successfully");
+        
         // Open WorkList Gadget
         cy.addLog("Open "+ amiValue.anyGadget.workListGadget);
         anyGadgetUtils.openGadgetOrGroup(amiValue.anyGadget.workListGadget);
-        cy.addLog(amiValue.anyGadget.workListGadget+ " Opened Successfully");
+        cy.addLog(amiValue.anyGadget.workListGadget +" Opened Successfully");
 
         // Open Browse Gadget
         cy.get(amiDom.workListGadget.browserIcon).click();
@@ -71,7 +71,7 @@ describe("Work list gadget Test Cases with apply to list dropdown", function() {
         
         // Uncheck 'Can create new lists'
         cy.get(amiDom.workListGadget.workingListCreateNewListCheckbox).uncheck();
-        cy.addLog("Uncheck On Create New List ");
+        cy.addLog("Uncheck On Create New List");
 
         // Click ok to save Index Menu Options
         workSpaceEditorUtils.closeWorkspaceEditor();
