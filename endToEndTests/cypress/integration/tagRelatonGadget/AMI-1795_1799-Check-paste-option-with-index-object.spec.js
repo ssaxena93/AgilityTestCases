@@ -86,7 +86,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         // Check on Inside child Objects
         selectChildObjects();
 
-        //Select copy option on tag relation gadget menu
+        // Select copy option on tag relation gadget menu
         cy.get(amiDom.tagRelationGadget.menuCopy).click();
 
         // Copied Object Should be Linked to ClipBoard
@@ -148,7 +148,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.get(pasteTagRelationWindowDom.pasteCheckBox).should('be.visible');
         cy.contains("Only show dialog when auto map fails").should('be.visible');
 
-        // copied object Should Mapped with Select object
+        // Copied object Should Mapped with Select object
         cy.get(pasteTagRelationWindowDom.pasteRelation).should('be.visible');
         cy.addLog("Displaying all Available Options in Paste Relation Window");
 

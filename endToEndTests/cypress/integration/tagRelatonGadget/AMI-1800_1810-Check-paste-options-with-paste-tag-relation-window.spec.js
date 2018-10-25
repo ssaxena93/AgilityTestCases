@@ -97,7 +97,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog("Select Automap");
         cy.get(pasteTagRelationWindowDom.unmapAll).click();
 
-        // click on Automap
+        // Click on Automap
         cy.get(pasteTagRelationWindowDom.autoMap).click();
         cy.addLog("Object should automatically linked to respective selected Tag relation");
 
@@ -135,7 +135,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         .trigger('mousemove', { which: 1, pageX: 50, pageY: 0 }).trigger('mouseup');
         cy.log('Cypress is not supporting "Drag and Drop" Properly');
 
-        // click on Automap
+        // Click on Automap
         cy.addLog("Select Automap");
         cy.get(pasteTagRelationWindowDom.autoMap).click();
         cy.addLog("Objects Moved to Unmapped to Automap");

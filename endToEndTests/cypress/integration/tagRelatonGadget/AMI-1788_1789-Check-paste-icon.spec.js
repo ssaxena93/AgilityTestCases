@@ -146,12 +146,12 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         browserGadgetUtils.setStructureType(anyGadget.type);
         cy.addLog(anyGadget.type +" Displayng with List Of Objects");
  
-        //Verify its copied in !!Demo Catalog
+        // Verify its copied in !!Demo Catalog
         cy.addLog("Select any Other Object from Events and Verify")
         browserGadgetUtils.setBrowseContext(anyGadget.browseQaTestAgain);
         browserGadgetUtils.setBrowseContext(anyGadget.browseDemoCatalog);
 
-        //Veirify Cantilever Chair Tag Added 
+        // Veirify Cantilever Chair Tag Added 
         cy.wait(2000)
         cy.get(anyGadgetDom.jldSingleIdxArrow).click();
         cy.contains(anyGadget.cantileverChair).should('be.visible');

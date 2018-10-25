@@ -107,7 +107,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         // Replace with Exisiting one
         cy.get(anyGadgetDom.replace).click();
 
-        // Click ok submit
+        // Click ok to submit
         cy.get(amiDom.amiLogin.ok).click();
         cy.wait(1000);
         cy.addLog('Should be replace with New child');
@@ -135,7 +135,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
 
         cy.log("Removed the linked tag relation");
 
-        // Click ok submit
+        // Click ok to  submit
         cy.get(amiDom.amiLogin.ok).click();
         cy.addLog("Childs are Removed");
 

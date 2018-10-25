@@ -86,9 +86,10 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     
   });
 
-  /* 1.Click on the relation attribute. 
-     2.In the Edit relation window, select an object from structure type drop down. 
-     3.Click Ok. */
+  /*1.Click on the relation attribute. 
+    2.In the Edit relation window, select an object from structure type drop down. 
+    3.Click Ok. 
+  */
 
   it("AMI-1826:50, The selected object should get linked with the relation attribute.", function() {
     

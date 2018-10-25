@@ -61,7 +61,7 @@ describe("Check Pate Icon Options in Tag Relations Gadget", function() {
         cy.addLog("Select "+ anyGadget.anyInput);
         browserGadgetUtils.setBrowseContext(anyGadget.anyInput);
 
-        //Select copy option on Browser Gadget menu
+        // Select copy option on Browser Gadget menu
         cy.addLog('Select Copy from Tag Relation Gadget Action Menu');
         cy.get(amiDom.anyGadget.browserIconCopy).should('be.visible').click();
 

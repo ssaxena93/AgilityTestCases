@@ -172,8 +172,8 @@ describe('Check Action Menu Options in Tag Relation Gadgets', function() {
     cy.get(amiDom.anyGadget.cypressRelationTagCheck).check();
     cy.addLog("Multi-instance tag relation is checked");
 
-    cy.addLog("Trying to re-order the objects beneath the Tag relation");
     // Click on index menu icon
+    cy.addLog("Trying to re-order the objects beneath the Tag relation");
     cy.get(amiDom.tagRelationGadget.menuIcon).click();
 
     // Click on the re-order in menu
