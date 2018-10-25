@@ -5,7 +5,7 @@ Test Scenario : Checking Menu Options Copy Icon State
 10/25/2018, 6:40:14 PM : Trying to Change Workspace to QA Attribute Gadget 
 10/25/2018, 6:40:15 PM : QA Attribute Gadget Changed Successfully 
 10/25/2018, 6:40:15 PM : Trying to Open Don't show prefixes in object names Browse Gadget 
-10/25/2018, 6:40:16 PM : Don't show prefixes in object names Opend With List 
+10/25/2018, 6:40:16 PM : Don't show prefixes in object names Opened With List 
 10/25/2018, 6:40:16 PM : Select Events 
 10/25/2018, 6:40:18 PM : Events Displayng with List Of Objects 
 10/25/2018, 6:40:18 PM : Select !!QA Data 2object 
